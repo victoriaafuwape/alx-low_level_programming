@@ -8,7 +8,7 @@
  * Return: 0 indicates successful execution
  */
 
-main(void)
+int main(void)
 {
 	char
 	int
