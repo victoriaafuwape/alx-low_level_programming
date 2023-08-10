@@ -3,7 +3,6 @@
 
 /**
  * main - entry point
- * printf - outputs a string
  *
  * Return: 0 indicates successful execution
  */
