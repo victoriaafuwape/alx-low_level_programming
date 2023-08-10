@@ -1,4 +1,4 @@
-/* Size of days types */
+/* Size of data types */
 #include <stdio.h>
 
 /**
