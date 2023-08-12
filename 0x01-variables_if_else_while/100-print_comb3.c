@@ -6,20 +6,26 @@
  * Return: 0 indicates successful execution
  */
 
+#include <stdio.h>
+
+/**
+ * main - Entry point
+ *
+ * Return: 0 indicates successful execution
+ */
+
 int main(void)
 {
-	int c, i;
+	int first_digit, second_digit;
 
-	c = i = '0';
-
-	for (c = '0'; c <= '9'; c++)
+	for (first_digit = 0; first_digit < 9; first_digit++)
 	{
-		for (i = '0'; i <= '9'; i++)
+		for (second_digit = first_digit + 1; second_digit < 10; second_digit++)
 		{
-			putchar(c);
-			putchar(i);
+			putchar('0' + first_digit);
+			putchar('0' + second_digit);
 
-			if ((c != '9') || (c == '9' && i != '9'))
+			if (first_digit != 8 || second_digit != 9)
 			{
 				putchar(',');
 				putchar(' ');
@@ -28,6 +34,5 @@ int main(void)
 	}
 
 	putchar('\n');
-
 	return (0);
 }
