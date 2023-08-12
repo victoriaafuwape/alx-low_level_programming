@@ -6,14 +6,6 @@
  * Return: 0 indicates successful execution
  */
 
-#include <stdio.h>
-
-/**
- * main - Entry point
- *
- * Return: 0 indicates successful execution
- */
-
 int main(void)
 {
 	int first_digit, second_digit;
