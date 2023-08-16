@@ -4,6 +4,7 @@
 
 /**
  * print_last_digit - Function prints the last digit
+ * @number: Number to be checked
  *
  * Return: 0 Always (success)
  */

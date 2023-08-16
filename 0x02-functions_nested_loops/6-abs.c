@@ -4,7 +4,7 @@
 
 /**
  * _abs - Function name defined
- *
+ * @number: Number to be checked
  * Return: Always 0 (success)
  */
 
