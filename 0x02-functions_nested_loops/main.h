@@ -1,4 +1,4 @@
-/* main header file */
+/* Function Declarations with their Prototypes */
 
 int _putchar(char c);
 
