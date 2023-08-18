@@ -2,7 +2,8 @@
 
 /**
  * mul - function name
- * @c: a, and b are the formal parameters
+ * @a: function's formal parameter
+ * @b: function's formal parameter
  *
  * Return: 0 indicates success
  */
