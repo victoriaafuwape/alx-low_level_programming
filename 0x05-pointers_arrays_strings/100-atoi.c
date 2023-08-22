@@ -1,4 +1,5 @@
 #include <stdbool.h>
+#include <limits.h>
 
 /**
  * _atoi - converts a string to an integer
@@ -25,6 +26,15 @@ int _atoi(char *s)
 	/* Convert digit characters to integer */
 	while (*s && (*s >= '0' && *s <= '9'))
 	{
+		/* Check for overflow */
+		if (result > INT_MAX / 10)
+		{
+			return (isNegative ? INT_MIN : INT_MAX);
+		}
+		if (result == INT_MAX / 10 && (*s - '0') > INT_MAX % 10)
+		{
+			return (isNegative ? INT_MIN : INT_MAX);
+		}
 		result = result * 10 + (*s - '0');
 		s++;
 	}
