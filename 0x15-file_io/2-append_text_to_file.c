@@ -23,9 +23,9 @@ int append_text_to_file(const char *filename, char *text_content)
 	taya = open(filename, O_WRONLY | O_APPEND);
 	if (text_content == NULL)
 	{
-                close(taya);
-                return (1);
-        }
+		close(taya);
+		return (1);
+	}
 	tayad = write(taya, text_content, len);
 	if ((taya == -1) || (tayad == -1))
 	{
