@@ -19,7 +19,7 @@ int mul(int a, int b)
 }
 
 /* Function to divide two numbers (integer division) */
-int divi(int a, int b)
+int div(int a, int b)
 {
 	if (b != 0)
 	{
