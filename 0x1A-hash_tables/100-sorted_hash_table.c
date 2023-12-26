@@ -38,6 +38,8 @@ shash_table_t *shash_table_create(unsigned long int size)
 	return (new_table);
 }
 
+#include "hash_tables.h"
+
 /**
  * shash_table_set - Adds or updates an element in a sorted hash table
  * @ht: The sorted hash table you want to add or update the key/value to
@@ -49,10 +51,21 @@ shash_table_t *shash_table_create(unsigned long int size)
 int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
-	shash_node_t *new_node, *tmp;
+	shash_node_t *new_node, *tmp, *snode;
 
 	if (!ht || !key || strlen(key) == 0 || !value)
 		return (0);
+	snode = ht->shead;
+	while (snode)
+	{
+		if (strcmp(snode->key, key) == 0)
+		{
+			free(snode->value);
+			snode->value = strdup(value);
+			return (1);
+		}
+		snode = snode->snext;
+	}
 	new_node = malloc(sizeof(shash_node_t));
 	if (!new_node)
 		return (0);
