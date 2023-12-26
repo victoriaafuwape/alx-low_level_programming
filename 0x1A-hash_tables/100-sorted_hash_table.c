@@ -69,7 +69,7 @@ shash_node_t *create_shash_node(const char *key, const char *value)
 }
 
 /**
- * insert_in_sorted_list - Inserts a node into the sorted list of the hash table
+ * insert_in_sorted_list - Inserts a node into the sorted list of the htable
  * @ht: The sorted hash table
  * @node: The node to be inserted
  *
